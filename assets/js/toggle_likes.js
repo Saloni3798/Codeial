@@ -2,6 +2,7 @@
 class ToggleLike{
     constructor(toggleElement){
         this.toggler = toggleElement;
+        console.log(toggleElement)
         this.toggleLike();
     }
 

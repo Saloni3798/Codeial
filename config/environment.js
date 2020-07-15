@@ -16,7 +16,7 @@ const accessLogStream = rfs.createStream('access.log', {
 
 const development = {
     name: 'development',
-    asset_path: '/assets',
+    asset_path: './assets',
     session_cookie_key: 'blahsomething',
     db: 'codeial_development',
     smtp: {
@@ -67,13 +67,14 @@ const production =  {
     //check it 
 }
 
-console.log(process.env.CODEIAL_ASSET_PATH);
-console.log(process.env.CODEIAL_DB);
-console.log(process.env.CODEIAL_GMAIL_USERNAME);
+// console.log(process.env.CODEIAL_ASSET_PATH);
+// console.log(process.env.CODEIAL_DB);
+// console.log(process.env.CODEIAL_GMAIL_USERNAME);
 
 
-// module.exports = eval(process.env.NODE_ENV) == undefined ? development : production;
-module.exports = eval(process.env.NODE_ENV)==undefined?development:eval(process.env.NODE_ENV);
+module.exports = eval(process.env.NODE_ENV) == undefined ? development : production;
+// module.exports = eval(process.env.NODE_ENV)==undefined?development:eval(process.env.NODE_ENV);
+// module.exports =development;
 
 // call kro 7972473142ok
 
